@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && cp CNAME docs"
   },
   "keywords": [],
   "author": "",
@@ -21,11 +21,14 @@
     "http-server": "^13.0.2",
     "mini-css-extract-plugin": "^2.4.1",
     "npm-check-updates": "",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "datatables.net": "^1.11.3",
     "datatables.net-dt": "^1.11.3",
     "jquery": "^3.6.0",

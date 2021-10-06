@@ -44,14 +44,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader"
+          "css-loader",
+          "sass-loader"
         ],
       },
       {
-        test: /\.(ico|png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           'file-loader'
         ]
