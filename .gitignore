@@ -1,2 +1,4 @@
-google-doc-url.js
+orig/google-doc-url.js
 .DS_Store
+node_modules/
+src/
