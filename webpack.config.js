@@ -24,10 +24,14 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'docs'),
     clean: true,
+    assetModuleFilename: 'img/[name][ext][query]'
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new FaviconsWebpackPlugin('src/sun.png'),
+    new FaviconsWebpackPlugin({
+      logo: './src/sun.png',
+      prefix: 'favicons/',
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       scriptLoading: 'blocking',
@@ -51,11 +55,10 @@ module.exports = {
           "sass-loader"
         ],
       },
-//      {
-//        test: /\.(png|jpe?g|gif)$/i,
-//        loader: 'file-loader', 
-//        options: { name: '[name].[ext]' }
-//      }
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset/resource"
+      },
     ]
   },
   optimization: {
