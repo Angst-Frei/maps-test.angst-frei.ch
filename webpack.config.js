@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const buildDate = new Date().toISOString(); 
+const pageURL = "https://maps-test.angst-frei.ch";
 
 module.exports = {
   mode: 'production',
@@ -33,7 +35,8 @@ module.exports = {
       prefix: 'favicons/',
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      buildDate: buildDate,
+      pageURL: pageURL,
       scriptLoading: 'blocking',
       inject: 'body',
       template: path.resolve(__dirname, 'src', 'index.html'),
