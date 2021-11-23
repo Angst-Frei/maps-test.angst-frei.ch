@@ -37,6 +37,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "leaflet-fullscreen": "^1.0.2",
     "leaflet-providers": "github:leaflet-extras/leaflet-providers",
+    "leaflet-routing-machine": "^3.2.12",
     "leaflet.locatecontrol": "^0.74.1",
     "leaflet.markercluster": "^1.5.3",
     "leaflet.markercluster.layersupport": "^2.0.1",
